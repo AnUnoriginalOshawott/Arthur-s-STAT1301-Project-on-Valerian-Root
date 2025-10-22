@@ -1,6 +1,3 @@
-%%%% HI CHARLIE!!!!!!! %%%%
-
-
 % ****** Start of file apssamp.tex ******
 %
 %   This file is part of the APS files in the REVTeX 4.1 distribution.
@@ -25,7 +22,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{mathrsfs}
-\usepackage{graphics}
+\usepackage{graphicx}
 \usepackage{xspace}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}% Include figure files
@@ -36,7 +33,6 @@
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 \usepackage[capitalise]{cleveref}
-% Useful functions or other items that must be added to the report
 
 \begin{document}
 \title{A clinical test of the effects of Valerian root on waking hours at night}
@@ -48,15 +44,27 @@
 \affiliation{School of Mathematics and Physics, The University of Queensland, QLD 4072, Australia}
 
 \maketitle
+%%% WORDCOUNT: After excluding things which do not count towards the word count (e.g. citations), and condensing equations to one word (MS word seems to turn one equation into like 20 or so words), I'd say my word count is somewhere around 620 words%%%
 
-\textit{Introduction}: Valerian root is a traditional plant primarily used medically to relieve insomnia and promote sleep \cite{ValerianSource1}. Although a common traditional remedy, medical trials assessing the effectiveness of Valerian root are limited and have so far given mixed results \cite{ValerianSource2}. Hence, this study seeks to join this body of literature and help clarify whether Valerian root is an effective at promoting sleep. In particular, we will analyse the effects of continuous Valerian use over time on its effectiveness at reducing waking hours at night. \\
+\textit{Introduction}: Valerian root is a traditional plant primarily used medically to relieve insomnia and promote sleep \cite{ValerianSource1}. Although a common traditional remedy, medical trials assessing the effectiveness of Valerian root are limited and have so far given mixed results \cite{ValerianSource2}. Hence, this study seeks to join this body of literature and help clarify whether Valerian root is an effective at promoting sleep. \\
 
 \textit{Methods}: 
-We conducted a clinical trial of $n=62$ residents on \emph{The Islands} archipelago. We tried to take roughly equal numbers of male and female islanders from a variety of cities across the islands and from many age brackets (20-70 years of age) in order to distinguish the effects of the plant from age-related, sex-related, and geographical factors which may affect sleep. In line with conventional ethical standards, we consent was sought from all islanders we tested on. Since Valerian root is thought to be a sedative, we instructed all test subjects to reduce their consumption of alcohol during the trial (to prevent harmful interaction effects). Pregnant women were also excluded from our study to ensure their and their child’s safety. \\
+We conducted an experimental trial of $n=62$ residents on \emph{the Islands}. We tried to take roughly equal numbers of male and female islanders from a variety of cities across the islands and from many age brackets (20-70 years of age) to distinguish Valerian's effects from age-related, sex-related, and geographical factors which may affect sleep. Each test subject was randomly assigned to take either a 1g tablet of Valerian each night, or be given placebo sugar tablets (each with 50\% probability). This gave sample sizes $n_C = 30$ for the control group and $n_V = 32$ Valerian takers. \\
 
-Once test subjects were found, each was randomly assigned either to a group of people given a 1g tablet of Valerian each night, or a control group who were given a sugar tablet. To ensure the presence Valerian in the former group's bodies during sleep \cite{ValerianSource1}, these were given no earlier than 2 hours and no later than 30 minutes before the islanders' 10:00PM bedtimes every night for 4 consecutive nights. We measured the effectiveness of Valerian as a  examined hours of their sleep cycle each night that residents were awake from a hypnogram of each test subject’s sleep (to within $\pm10$ mins due to scale on hypnograms) before beginning the trial, as well after 1-4 nights of the trial. Our 1g dose is higher than the reccommended maximum daily intake of 300-600 mg of Valerian root \cite{ValerianSource1}, so we limited the length of our trial to prevent inducing harmful side effects. \\
+To ensure the presence Valerian in the latter group's bodies during sleep \cite{ValerianSource1}, these were given between 0.5-2 hours before the islanders' 10:00PM bedtimes every night. This was done for 4 consecutive nights. We measured the effectiveness of Valerian in promoting sleep by examining hours of their sleep cycle each night that residents were awake. This was taken from a hypnogram of each test subject’s sleep (to within $\pm10$ mins), both before beginning the trial, as well after 1-4 nights afterward. This limited number of nights (as opposed to a weeks-long trial) is used to prevent our result from being affected by the development of tolerances to Valerian's effects. \\
 
-If Valerian were effective in inducing sleep, we would expect to see a statistically significant decrease in the waking hours of the islanders who take Valerian compared to those who do not \cite{SleepCyclesSource}. 
+%%% NOTE: C and V are used as indices in the below working, not as powers %%%
+Our test subjects' sleep habits over the trial may be influenced by their Valerian consumption, and external factors such as their age, personal health, and environment. Assuming linearity in the number of nights $t$ since trials began (not terrible over short timescales), the mean waking hours $y^C$ for the control group and $y^V$ for the Valerian takers will be:
+$$y^C = \beta_0^C + \beta_1^C t, \qquad y^V = \beta_0^V + \beta_1^V t$$
+For some parameters $\beta_0^C, \beta_0^V$ representing baseline average waking hours before the trial began, and $\beta_1^C, \beta_1^V$ representing the rate per day of sleeping change increases. If each test subject's waking time is independent of the others', and our data is normally distributed around our two lines with a variance independent of $t$, we can estimate these parameters and their standard deviations $\sigma_0^C, \sigma_1^C, \sigma_0^V, \sigma_1^V$ from a linear regression model. \\
+
+If both the control and Valerian taker groups are representative of the islands' population, the nightly changes $\beta_1^C, \beta_1^V$ should have no difference in each other besides those due to Valerian's effects. Hence, we test the hypotheses:
+$$H_0: \beta_1^C = \beta_1^V, \qquad H_1: \beta_1^C > \beta_1^V$$
+Where the null hypothesis $H_0$ corresponds to the Valerian having no effect on waking hours at night, and the alternative hypothesis $H_1$ corresponds to Valerian producing a statistically significant reduction in waking hours each night comoared to our control group. To evaluate these hypotheses, we note that our estimates of $\beta_1^C, \beta_1^V$ should be $T$-distrubuted under our assumptions, with degrees of freedom $n_C - 1, n_V - 1$ respectively. Hence, assuming our null hypothesis, we expect the below to be $t_\text{df}$-distributed, with degrees of freedom df given by Welch's approximation:
+$$T = \frac{\beta_1^C - \beta_1^V}{\sqrt{\frac{(\sigma_1^C)^2}{n_C} + \frac{(\sigma_1^V)^2}{n_V}}}$$
+We then compute the probability of our data being more extreme than predicted from our $T$ value assuming $H_0$ as $p = \mathbb{P}(t_{df} \geq T)$ and evaluate our hypotheses against a standard 95\% confidence criterion.
+
+\textit{Ethics}: Consent was obtained from all islanders we tested on. Since Valerian root may be a sedative (and hence interact negatively with alcohol \cite{ValerianSource1}), all test subjects were told to reduce alcohol consumption during the trial. Moreover, pregnant women were excluded from our study, as little is known of valerian's effects on pregnancies \cite{ValerianSource2}. 
 
 \textit{Notes for discussion:} 
 Here are some things which are worth noting (I'm just not sure if this is best to put in method or conclusion). This is NOT a section of the report, and should be edited out and incorporated into the report properly later
