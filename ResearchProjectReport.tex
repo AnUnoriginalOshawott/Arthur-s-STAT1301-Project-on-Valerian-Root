@@ -1,0 +1,75 @@
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.1 distribution.
+%   Version 4.1r of REVTeX, August 2010
+%
+%   Copyright (c) 2009, 2010 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.1
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+\documentclass[10pt,preprintnumbers,amsmath,amssymb,floatfix,twocolumn,prl]{revtex4-2}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{graphics}
+\usepackage{xspace}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}
+\usepackage{float}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+\usepackage[capitalise]{cleveref}
+% Useful functions or other items that must be added to the report
+
+\begin{document}
+\title{A clinical test of the effects of Valerian root on waking hours at night}
+\author{Arthur Souza Passos}
+\email{a.passos@student.uq.edu.au}
+\affiliation{School of Mathematics and Physics, The University of Queensland, QLD 4072, Australia}
+\author{Charlie Boardman}
+\email{c.boardman1@student.uq.edu.au}
+\affiliation{School of Mathematics and Physics, The University of Queensland, QLD 4072, Australia}
+
+\maketitle
+
+\textit{Introduction}: Valerian root is a traditional plant primarily used medically to relieve insomnia and promote sleep \cite{ValerianSource1}. Although a common traditional remedy, medical trials assessing the effectiveness of Valerian root are limited and have so far given mixed results \cite{ValerianSource2}. Hence, this study seeks to join this body of literature and help clarify whether Valerian root is an effective at promoting sleep. In particular, we will analyse the effects of continuous Valerian use over time on its effectiveness at reducing waking hours at night. \\
+
+\textit{Methods}: 
+We conducted a clinical trial of $n=62$ residents on \emph{The Islands} archipelago. We tried to take roughly equal numbers of male and female islanders from a variety of cities across the islands and from many age brackets (20-70 years of age) in order to distinguish the effects of the plant from age-related, sex-related, and geographical factors which may affect sleep. In line with conventional ethical standards, we consent was sought from all islanders we tested on. Since Valerian root is thought to be a sedative, we instructed all test subjects to reduce their consumption of alcohol during the trial (to prevent harmful interaction effects). Pregnant women were also excluded from our study to ensure their and their child’s safety. \\
+
+Once test subjects were found, each was randomly assigned either to a group of people given a 1g tablet of Valerian each night, or a control group who were given a sugar tablet. To ensure the presence Valerian in the former group's bodies during sleep \cite{ValerianSource1}, these were given no earlier than 2 hours and no later than 30 minutes before the islanders' 10:00PM bedtimes every night for 4 consecutive nights. We measured the effectiveness of Valerian as a  examined hours of their sleep cycle each night that residents were awake from a hypnogram of each test subject’s sleep (to within $\pm10$ mins due to scale on hypnograms) before beginning the trial, as well after 1-4 nights of the trial. Our 1g dose is higher than the reccommended maximum daily intake of 300-600 mg of Valerian root \cite{ValerianSource1}, so we limited the length of our trial to prevent inducing harmful side effects. \\
+
+If Valerian were effective in inducing sleep, we would expect to see a statistically significant decrease in the waking hours of the islanders who take Valerian compared to those who do not \cite{SleepCyclesSource}. 
+
+\textit{Notes for discussion:} 
+Here are some things which are worth noting (I'm just not sure if this is best to put in method or conclusion). This is NOT a section of the report, and should be edited out and incorporated into the report properly later
+\begin{itemize}
+\item Just looking at waking hours gives an incomplete characterisation of sedative-hypnotic drugs, as this does not analyse the quality of the persons' sleep (for example, there is evidence hypnotic-sedative drugs increase the prevalence of the N1 and N2 phases of deep sleep (its 2 shallower phases) while lowering the time spent in REM sleep and N3 deep sleep \cite{SleepCyclesSource}, disrupting the typical sleep cycle and giving lower quality sleep).
+
+\item My preliminary data analysis is actually suggesting that Valerian is a stimulant, with Valerian takers experiencing a lower rate of decrease in waking hours compared to the placebo takers. This is fine -- we'll just need to p-test for Valerian being a stimulant (i.e. for null hypothesis $\beta_1^\text{Valerian} = \beta_1^\text{Control}$ and alternative hypothesis $\beta_1^\text{Valerian} > \beta_1^\text{Control}$). There may even be some historical precedent for Valerian being used as a stimulant in the 19th century \cite{ValerianSource2}, so this would be an interesting thing to talk about.
+
+\item One person dropped out of my study, but he did so before I could do any proper measurements on him (I gave islanders about 24 hours to reduce their alcohol consumption before beginning trials). This may be worth mentioning in the report, but since no data ended being collected from him, I do not think it is the end of the world.
+
+\item Using hypnograms instead of a survey helped prevent errors in the study from the islanders poorly estimating and/or lying about the hours of sleep they got, but it introduced the issue of me having to read the hypnograms in order to assign a sleeping time to them, which could not be done with perfect accuracy. I'd say sleep times are only really know to $\pm 10$ minutes, and is only given to a fidelity of 5 minutes.
+
+\item I did not specifically select for islanders who were getting low amounts of sleep each night (I TRIED to with the islands' newspaper feature, but it would not work for any questions I wanted to ask about sleep schedules or anxiety/stress). This may make the effects of Valerain less pronounced here (if someone is already getting a healthy amount of sleep each night, the drug may not necessarily increase those hours). This could be worth discussing.
+\end{itemize}
+
+\bibliographystyle{apa}
+\bibliography{ResearchProjectReportBibliography}
+
+\end{document}
