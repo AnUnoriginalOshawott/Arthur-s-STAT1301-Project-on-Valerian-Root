@@ -1,17 +1,17 @@
 # Fdb version 4
-["bibtex ResearchProjectReport"] 1761180902.04246 "ResearchProjectReport.aux" "ResearchProjectReport.bbl" "ResearchProjectReport" 1761180903.08187 2
+["bibtex ResearchProjectReport"] 1761187048.67687 "ResearchProjectReport.aux" "ResearchProjectReport.bbl" "ResearchProjectReport" 1761187049.56095 2
   "./ResearchProjectReportBibliography.bib" 1761175160 944 b142a42446fd7a8ed5055af29afc05a0 ""
-  "./ResearchProjectReportNotes.bib" 1761180898 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "ResearchProjectReport.aux" 1761180898 715 0a3dc996ce167bcdfac2e215c94c714f "pdflatex"
+  "./ResearchProjectReportNotes.bib" 1761187044 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "ResearchProjectReport.aux" 1761187045 715 0a3dc996ce167bcdfac2e215c94c714f "pdflatex"
   "apa.bst" 0 -1 0 ""
   (generated)
   "ResearchProjectReport.bbl"
   "ResearchProjectReport.blg"
   (rewritten before read)
-["pdflatex"] 1761180896.38855 "c:/Users/charl/OneDrive/Documents/UNI/UNI 1 SEM 2/STAT1301/Research/Arthur-s-STAT1301-Project-on-Valerian-Root/ResearchProjectReport.tex" "ResearchProjectReport.pdf" "ResearchProjectReport" 1761180903.08321 0
-  "ResearchProjectReport.aux" 1761180898 715 0a3dc996ce167bcdfac2e215c94c714f "pdflatex"
-  "ResearchProjectReport.bbl" 1761180903 0 d41d8cd98f00b204e9800998ecf8427e "bibtex ResearchProjectReport"
-  "ResearchProjectReport.out" 1761180898 443 8a18f8e5cfe67853d39d64e880f9cf11 "pdflatex"
+["pdflatex"] 1761187042.77427 "c:/Users/charl/OneDrive/Documents/UNI/UNI 1 SEM 2/STAT1301/Research/Arthur-s-STAT1301-Project-on-Valerian-Root/ResearchProjectReport.tex" "ResearchProjectReport.pdf" "ResearchProjectReport" 1761187049.56226 0
+  "ResearchProjectReport.aux" 1761187045 715 0a3dc996ce167bcdfac2e215c94c714f "pdflatex"
+  "ResearchProjectReport.bbl" 1761187049 0 d41d8cd98f00b204e9800998ecf8427e "bibtex ResearchProjectReport"
+  "ResearchProjectReport.out" 1761187045 443 8a18f8e5cfe67853d39d64e880f9cf11 "pdflatex"
   "ResearchProjectReport.tex" 1761180511 9097 2f29e264f83154e8dc99adeb6fa99a0f ""
   "c:/Users/charl/OneDrive/Documents/UNI/UNI 1 SEM 2/STAT1301/Research/Arthur-s-STAT1301-Project-on-Valerian-Root/ResearchProjectReport.tex" 1761180511 9097 2f29e264f83154e8dc99adeb6fa99a0f ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1761010054 2971 def0b6c1f0b107b3b936def894055589 ""
