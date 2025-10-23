@@ -1,4 +1,9 @@
-.Rproj.user
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
