@@ -8,4 +8,7 @@
 *.fls
 *.fdb_latexmk
 scatter_fits.png
+<<<<<<< HEAD
 
+=======
+>>>>>>> 16e146d (didnt stage - (finished off the data analysis (data processing, data analyis and exporting))
