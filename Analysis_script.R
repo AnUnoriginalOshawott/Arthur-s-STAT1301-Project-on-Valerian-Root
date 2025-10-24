@@ -18,3 +18,8 @@ data_long <- data %>%
                values_to = "WakingMinutes") %>%
   mutate(Night = as.numeric(Night))
 
+#linear regression per group
+models <- data_long %>%
+  group_by(Selected_Treatment) %>%
+  do(model = lm(WakingMinutes ~ Night, data = .))
+
