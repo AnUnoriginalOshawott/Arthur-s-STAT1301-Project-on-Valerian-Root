@@ -7,3 +7,7 @@
 *.out
 *.fls
 *.fdb_latexmk
+slope_summary.csv
+residual_fitted_control.png
+scatter_fits.png
+residual_fitted_valerian.png
