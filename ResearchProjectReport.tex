@@ -63,7 +63,7 @@ $$H_0: \beta_1^C = \beta_1^V, \qquad H_1: \beta_1^C > \beta_1^V$$
 Where the null hypothesis $H_0$ corresponds to Valerian having no effect on waking hours at night, and the alternative hypothesis $H_1$ corresponds to Valerian producing a statistically significant reduction in waking hours each night relative to the control group. Our estimates of $\beta_1^C, \beta_1^V$ should be $T$-distrubuted under our assumptions, with degrees of freedom $n_C - 2, n_V - 2$ respectively. Hence, assuming our null hypothesis, we expect the below to be $t_\text{df}$-distributed:
 $$T = \frac{\beta_1^C - \beta_1^V}{\sqrt{\frac{(\sigma_1^C)^2}{n_C} + \frac{(\sigma_1^V)^2}{n_V}}}$$
 Where the degrees of freedom (df) is given by Welch's approximation:
-$$\text{df} = \frac{\left(\frac{(\sigma_1^C)^2}{n_C} + \frac{(\sigma_1^V)^2}{n_V}\right)^2}{\sqrt{\frac{(\sigma_1^C)^4}{n_C^2 (n_C - 2)} + \frac{(\sigma_1^V)^4}{n_V^2 (n_V - 2)}}}$$
+$$\text{df} = \frac{\left(\frac{(\sigma_1^C)^2}{n_C} + \frac{(\sigma_1^V)^2}{n_V}\right)^2}{\frac{(\sigma_1^C)^4}{n_C^2 (n_C - 2)} + \frac{(\sigma_1^V)^4}{n_V^2 (n_V - 2)}}$$
 We then compute the probability of our data being more extreme than predicted from our $T$ value assuming $H_0$ as $p = \mathbb{P}(t_{df} \geq T)$ and evaluate our hypotheses against a standard 95\% confidence criterion. \\
 
 \textit{Ethics}: Consent was obtained from all islanders we tested on. Since Valerian root may be a sedative (and hence interact with alcohol \cite{ValerianSource1}), all test subjects were instructed to reduce alcohol consumption during the trial. As little is known of valerian's effects on pregnancies \cite{ValerianSource2}, pregnant women were excluded from our study. \\
