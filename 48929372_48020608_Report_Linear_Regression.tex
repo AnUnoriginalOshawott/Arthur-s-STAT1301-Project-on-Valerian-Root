@@ -45,7 +45,7 @@
 \affiliation{School of Mathematics and Physics, The University of Queensland, QLD 4072, Australia}
 
 \maketitle
-%%% WORDCOUNT: After excluding things which do not count towards the word count (e.g. citations), and condensing equations to one word (MS word seems to turn one equation into like 20 or so words), I'd say my word count is somewhere around 620 words%%%
+%%% WORDCOUNT: 1060 WORDS %%%
 
 \textit{Introduction}: Valerian root is a traditional plant primarily used medically to relieve insomnia and promote sleep \cite{ValerianSource1}. Although a common traditional remedy, medical trials assessing the effectiveness of Valerian root in promoting sleep are limited and have given mixed results \cite{ValerianSource2}. Hence, this study seeks to join this body of literature and help clarify whether Valerian root is an effective at this task. \\
 
@@ -69,7 +69,7 @@ We then compute the probability of our data being more extreme than predicted fr
 
 \textit{Ethics}: Consent was obtained from all islanders we tested on. Since Valerian root may be a sedative (and hence interact with alcohol \cite{ValerianSource1}), all test subjects were instructed to reduce alcohol consumption during the trial. As little is known of valerian's effects on pregnancies \cite{ValerianSource2}, pregnant women were excluded from our study. \\
 
-\textit{Results}: Linear regression models were fitted to both the control and valerian groups' data to estimate the baseline waking hours per night ($\beta_0^C, \beta_0^V$) and the average rate of change in waking hours per night ($\beta_1^C, \beta_1^V$). For the conrol group the model was determined by:
+\textit{Results}: Linear regression models were fitted to both the control and valerian groups' data to estimate the baseline waking hours per night ($\beta_0^C, \beta_0^V$) and the average rate of change in waking hours per night ($\beta_1^C, \beta_1^V$). For the control group the model was determined by:
 $$
 y^c = 133.9 - 2.92 t
 $$
@@ -86,7 +86,7 @@ Both slope estimates were slightly negative (discussion) indicating a minor decr
 \caption{Waking minutes per night for Control (red) and Valerian (blue) groups with fitted regression lines. NOTE: discreet time values are jittered for clear distinction of data points.}
 \end{figure}
 Using these slope estimates and their standard errors, we computed the test statistic $T$ and degrees of freedom $df$ using Welch's t-test, giving: $T = 0.27$ and $df \approx 294$. From this the p-value was calculated as $P = 0.39$
-Diagnostic plots, including QQ plots and residuals vs fitted value plots, were created for both linear models in order to asses the valididty of the linear regression assumptions. These plots are displayed below. 
+Diagnostic plots, including QQ plots and residuals vs fitted value plots, were created for both linear models in order to asses the validity of the linear regression assumptions. These plots are displayed below. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\linewidth]{QQ_control.png}
@@ -114,8 +114,8 @@ Diagnostic plots, including QQ plots and residuals vs fitted value plots, were c
 All graphs indicate that the assumptions of the linear regression model are satisfied. The larger than expected extreme residuals of the QQ plot for the valerian model may indicate a small number of outliers were included in the group.\\
 
 \textit{Discussion and Conclusion}: Data collected from both groups displayed a minimal decrease in waking minutes per night over the course of the trial, with the valerian group showing a slightly steeper decrease. This decrease can be attributed to a variety of factors, including a difference in participant demographics, environmental variation such as a higher proportion of valerian takers coming from naturally darker or quieter locations. 
-Research with a larger sample size and stricter control of exteranal factors is needed to further investiagte the effects of valerian root on sleep quality. Furthermore, the decision to measure sleep quality based on waking minutes per night may not be the most effecive approach. Future studies could instead focus on other measurements such as time taken to fall asleep or time spent in different sleep stages.
-The P-value of $P = 0.39$ leads to the rejection of our alternative hypothesis $H_1: \beta_1^C > \beta_1^V$ at a 95\% confidence interval. The rejection of $H_1$ indicates that there is insufficent evidence to suggest that there is a significant corelation between the use of valerian root and a reduction in waking minutes per night
+Research with a larger sample size and stricter control of external factors is needed to further investigate the effects of valerian root on sleep quality. Furthermore, the decision to measure sleep quality based on waking minutes per night may not be the most effective approach. Future studies could instead focus on other measurements such as time taken to fall asleep or time spent in different sleep stages.
+The P-value of $P = 0.39$ leads to the rejection of our alternative hypothesis $H_1: \beta_1^C > \beta_1^V$ at a 95\% confidence interval. The rejection of $H_1$ indicates that there is insufficient evidence to suggest that there is a significant corelation between the use of valerian root and a reduction in waking minutes per night
 
 
 
