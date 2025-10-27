@@ -68,37 +68,47 @@ We then compute the probability of our data being more extreme than predicted fr
 
 \textit{Ethics}: Consent was obtained from all islanders we tested on. Since Valerian root may be a sedative (and hence interact with alcohol \cite{ValerianSource1}), all test subjects were instructed to reduce alcohol consumption during the trial. As little is known of valerian's effects on pregnancies \cite{ValerianSource2}, pregnant women were excluded from our study. \\
 
-\textit{Results}: the results of our
-
-\textit{Notes for discussion:} 
-Here are some things which are worth noting (I'm just not sure if this is best to put in method or conclusion). This is NOT a section of the report, and should be edited out and incorporated into the report properly later
-\begin{itemize}
-\item Just looking at waking hours gives an incomplete characterisation of sedative-hypnotic drugs, as this does not analyse the quality of the persons' sleep (for example, there is evidence hypnotic-sedative drugs increase the prevalence of the N1 and N2 phases of deep sleep (its 2 shallower phases) while lowering the time spent in REM sleep and N3 deep sleep \cite{SleepCyclesSource}, disrupting the typical sleep cycle and giving lower quality sleep).
-
-\item My preliminary data analysis is actually suggesting that Valerian is a stimulant, with Valerian takers experiencing a lower rate of decrease in waking hours compared to the placebo takers. This is fine -- we'll just need to p-test for Valerian being a stimulant (i.e. for null hypothesis $\beta_1^\text{Valerian} = \beta_1^\text{Control}$ and alternative hypothesis $\beta_1^\text{Valerian} > \beta_1^\text{Control}$). There may even be some historical precedent for Valerian being used as a stimulant in the 19th century \cite{ValerianSource2}, so this would be an interesting thing to talk about.
-
-\item One person dropped out of my study, but he did so before I could do any proper measurements on him (I gave islanders about 24 hours to reduce their alcohol consumption before beginning trials). This may be worth mentioning in the report, but since no data ended being collected from him, I do not think it is the end of the world.
-
-\item Using hypnograms instead of a survey helped prevent errors in the study from the islanders poorly estimating and/or lying about the hours of sleep they got, but it introduced the issue of me having to read the hypnograms in order to assign a sleeping time to them, which could not be done with perfect accuracy. I'd say sleep times are only really know to $\pm 10$ minutes, and is only given to a fidelity of 5 minutes.
-
-\item I did not specifically select for islanders who were getting low amounts of sleep each night (I TRIED to with the islands' newspaper feature, but it would not work for any questions I wanted to ask about sleep schedules or anxiety/stress). This may make the effects of Valerian less pronounced here (if someone is already getting a healthy amount of sleep each night, the drug may not necessarily increase those hours). This could be worth discussing.
-\end{itemize}
-
-<<<<<<< HEAD
-\textit{Results}: Linear regression models were fitted to both the control and valerian groups' data to estimate the baseline waking hours per night ($\beta_0^C, \beta_0^V$) and the average rate of change in waking hours per night ($\beta_1^C, \beta_1^V$). For the conrol group the model was determined by: \\
+\textit{Results}: Linear regression models were fitted to both the control and valerian groups' data to estimate the baseline waking hours per night ($\beta_0^C, \beta_0^V$) and the average rate of change in waking hours per night ($\beta_1^C, \beta_1^V$). For the conrol group the model was determined by:
 $$y^c = 133.9 - 2.92 t$$
-with the slope estimate: $beta_1^c = - 2.92$ having a standard error of 
-The model for the valerian data was given by: \\
+with the slope estimate: $\beta_1^c = - 2.92$ having a standard error of 1.80.
+The model for the valerian data was given by: 
 $$y^V = 118.1 + 3.56 t$$
-with the slope estimate: $beta_1^v = - 3.56$ having a standard error of 
-
+with the slope estimate: $\beta_1^v = - 3.56$ having a standard error of 1.51.
 Both slope estimates were slightly negative (discussion) indicating a minor decrease in waking minutes per night over the course of the trial for both groups. The valerian group indicated a steeper decline in waking minutes per night, however using a welch test this difference in slope was found to be statistically insignificant. \\
-using these slope estimates and their standard errors, we computed the test statistic $T$ and degrees of freedom $df$ using Welch's approximation, giving: \\
+\begin{figure}
+\centering
+\includegraphics[width = 8cm, height = 6m]{linear_reg.png}
+\caption{Waking minutes per night for Control (red) and Valerian (blue) groups with fitted regression lines.}
+\end{figure}
+
+Using these slope estimates and their standard errors, we computed the test statistic $T$ and degrees of freedom $df$ using Welch's t-test, giving: $T = 0.27$ and $df \approx 294$. From this the p-value was calculated as $p = 0.39$\\
+Diagnostic plots, including QQ plots and residuals vs fitted value plots, were created for both linear models in order to asses the valididty of the linear regression assumptions. These plots are displayed below. \\
+
+\begin{figure}
+\centering
+\includegraphics[width = 8cm, height = 6m]{QQ_control.png}
+\caption{QQ plot of standardized residuals for the control group. The residuals align closely with the theoretical quantiles, suggesting the.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = 8cm, height = 6m]{QQ_valerian.png}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = 8cm, height = 6m]{residual_fitted_control.png}
+\caption{}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = 8cm, height = 6m]{residual_fitted_valerian.png}
+\caption{}
+\end{figure}
 
 
-
-=======
->>>>>>> f249b1141e2af7d31afc188904ccdddd7400b545
 \bibliographystyle{apa}
 \bibliography{ResearchProjectReportBibliography}
 

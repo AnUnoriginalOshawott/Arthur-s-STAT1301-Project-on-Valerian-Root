@@ -30,7 +30,8 @@
 library(readxl)
 
 #Import excel data 
-data <- read_excel("Research Project Data File.xlsx", sheet = 3, range = "A1:G63")
+Research_Project_Data_File <- read_excel("UNI/UNI 1 SEM 2/STAT1301/Research/Arthur-s-STAT1301-Project-on-Valerian-Root/Research Project Data File.xlsx", 
+                                          sheet = "Sheet3", range = "A1:G63")
 
 ####Data processing
 
